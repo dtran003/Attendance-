@@ -1,1 +1,1 @@
-Necessary files to run the project
+Code for Azure cloud
