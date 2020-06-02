@@ -1,2 +1,1 @@
-# Attendance-
-Academic project
+# CSC436-Attendance-App

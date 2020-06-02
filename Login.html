@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-4">
+    <form class="form-horizontal">
+    Username :<input type="text" name="id"><br>
+    Password :<input type="password" name="pass">
+    <input type="submit" value="Log in">
+    </form>
+    <input type="button" value="Reset">
+    </div>
+  </div>
+
+  <div>
+  <p><span id="datetime"></span></p>
+  <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleString();
+  </script>
+  </div>
+</body>
+</html>

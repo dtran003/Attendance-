@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="login.php2_files/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style ="background-color:grey;">
+<div class="container-fluid" style="background-color:grey;" "="" >
+<div class="row">
+<div class="col">
+<div class="text-center"><h3 style="color:rgb(50,205,50)">Current time: Nov/07/2019 03:49pm</h3></div>
+<div class="card" style="background-color:grey;" class="text-center">
+<img src="Attendeez.png" class="mx-auto d-block" width="175" height="175">
+<div class="card-body d-inline-flex justify-content-center" style="background-color:grey;">
+<form action="login.php" method="POST">
+<div class="form-group">Username: <input type="text" name="name" class="form-control"></div>
+<div class="form-group">Password: <input type="password" name="password" class="form-control"></div>
+<input type="hidden" name="redirect" value="index.php"><input type="hidden" name="lat" id="lat" value="44.6948349"><input type="hidden" name="long" id="long" value="-73.467479"><p id="note"></p>
+<input type="submit" value='Login' class="btn btn-primary" />
+</form>
+</div>
+</div>
+<div class='text-center'><a href="https://attendancerus.moodlecloud.com/login/forgot_password.php" class="text-body">Forgotten username or password?</a></div>
+</div>
+</div>
+</div>
+<script>
+let lat = document.getElementById('lat');
+let long = document.getElementById('long');
+let note = document.getElementById('note');
+if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+}
+function showPosition(position){
+    lat.value = position.coords.latitude;
+    long.value = position.coords.longitude;
+}
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      note.innerHTML = "User denied the request for Geolocation, ip geolocation will be less accurate."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      note.innerHTML = "Location information is unavailable, ip geolocation will be less accurate."
+      break;
+    case error.TIMEOUT:
+      note.innerHTML = "The request to get user location timed out, ip geolocation will be less accurate."
+      break;
+    case error.UNKNOWN_ERROR:
+      note.innerHTML = "An unknown error occurred, ip geolocation will be less accurate."
+      break;
+  }
+}
+</script>
+<script src="login.php2_files/jquery-3.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="login.php2_files/popper.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="login.php2_files/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body></html>

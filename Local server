@@ -1,0 +1,9 @@
+1. Download and install XAMPP for your operating system: https://www.apachefriends.org/index.html
+2. Download this repository's contents, copy the contents of the Dev folder into your XAMPP's htdocs folder
+3. Launch xampp-control.exe in your XAMPP installation, start the Apache and MySQL services
+4. Click on Admin on the MySQL service or go to https://localhost/phpmyadmin on your browser
+5. Create a database named testdb
+6. Create two tables in testdb:
+  -teachercourseattendance with columns course, class, username, code, classDate, classLate. Primary key (course, class)
+  -studentcourseattendance with columns course, class, username, notes, excuses, submitTime, latitude, longitude. Primary key (course, class), private key (course,class) on teachercourseattendance (course, class)
+7. Click on admin in the Apache service, or go to https://localhost/ on your browser. The web application should be running

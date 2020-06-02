@@ -1,0 +1,46 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body style="background-color:grey;"><!-- background color --><doctype html="">
+
+
+<div w3-include-html="icon.html"></div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="course.php_files/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+ iframe{
+     display: none;
+ }
+
+</style>
+
+
+<nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-light"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#"><img src="course.php_files/favicon.png" width="100/" height="60"></a><a class="navbar-brand" href="#">CSC442: Data Mining</a><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav"><li class="nav-item active"><a class="nav-link" href="https://attendancerus.azurewebsites.net/index.php">Index</a></li><li class="nav-item"><a class="nav-link" href="#Up">Upcoming sessions<span class="sr-only" >(current)</span></a></li><li class="nav-item"><a class="nav-link" href="#end" >Expired sessions</a></li><li class="nav-item"><a class="nav-link" href="#mainForm" >Track new sessions</a></li><li class="nav-item"><a class="nav-link disabled" href="#" >12/05/19 03:26pm</a></li><li class="nav-item"><a class="nav-link" href="https://attendancerus.azurewebsites.net/logout.php">Log out</a></li> </ul></div></nav><div class="card"><div class="card-body d-inline-flex flex-column"><h5 id="mainForm">Track new class session</h5><form id="createForm" class="d-block" method="POST" action="./newclass.php?course=7&amp;name=CSC442%3A+Data+Mining&amp;username=admin" style="color:rgb(50,205,50)"><p>Late limit (submission are marked as late after this date):<!--  color --><input type="datetime-local" class="form-control" name="classLate" value="12/05/2019 03:26pm"></p><p>End date (submission are locked after this date):<input type="datetime-local" class="form-control" name="classDate" value="12/05/2019 03:26pm"></p><p>Code: <input type="text" class="form-control" name="code" value="default" <="" p=""><input type="submit" class="btn btn-primary" value="Track new session"></p></form><button class="d-inline p-2 btn btn-info" id="formToggle">Show/Hide form</button></div></div><div class="card" id="Up"><div class="card-header"><h3 style="color:rgb(50,205,50)">Upcoming sessions</h3><!--  color --></div><div class="card-body d-inline-flex flex-column"></div></div><div class="card" id="end"><div class="card-header"><h3 style="color:rgb(50,205,50)">Ended sessions</h3><!--  color --></div><div class="card-body d-inline-flex flex-column"><div class="card"><div class="card-header"><h5>2 . 2019-03-12 10:00:00</h5></div><div class="card-body d-inline-flex flex-column" id="2"><p>Late limit: 2019-01-12 15:55:00</p><p></p><p>Current code: </p><p><a target="_blank" rel="noopenner noreferrer" href="http://api.qrserver.com/v1/create-qr-code/?data=https%3A%2Fattendancerus.azurewebsites.net%2Fvalidate.php%3Fcode%3D%26class%3D2%26course%3D7%26name%3DCSC442%3A+Data+Mining&amp;size=500x500" style="color:rgb(50,205,50)">See QR code</a><!--  color --></p><form method="POST" action="./newcode.php?id=7&amp;class=2&amp;name=CSC442%3A+Data+Mining"><input type="text" name="code"><input type="submit" value="Change Code" class="btn btn-primary"></form><a href="https://attendancerus.azurewebsites.net/class.php?class=2&amp;course=7&amp;name=CSC442%3A+Data+Mining" style="color:rgb(50,205,50)">1 students checked in</a><!--  color --></div><div class="card-footer"><button class="btn btn-info" onclick="toggle(2)">Show/Hide details</button></div></div><div class="card"><div class="card-header"><h5>1 . 2019-10-30 10:00:00</h5></div><div class="card-body d-inline-flex flex-column" id="1"><p>Late limit: 2019-10-29 15:44:00</p><p></p><p>Current code: default</p><p><a target="_blank" rel="noopenner noreferrer" href="http://api.qrserver.com/v1/create-qr-code/?data=https%3A%2Fattendancerus.azurewebsites.net%2Fvalidate.php%3Fcode%3Ddefault%26class%3D1%26course%3D7%26name%3DCSC442%3A+Data+Mining&amp;size=500x500" style="color:rgb(50,205,50)">See QR code</a><!--  color --></p><form method="POST" action="./newcode.php?id=7&amp;class=1&amp;name=CSC442%3A+Data+Mining"><input type="text" name="code"><input type="submit" value="Change Code" class="btn btn-primary"></form><a href="https://attendancerus.azurewebsites.net/class.php?class=1&amp;course=7&amp;name=CSC442%3A+Data+Mining" style="color:rgb(50,205,50)">4 students checked in</a><!--  color --></div><div class="card-footer"><button class="btn btn-info" onclick="toggle(1)">Show/Hide details</button></div></div><div class="card"><div class="card-header"><h5>4 . 2019-10-31 16:20:00</h5></div><div class="card-body d-inline-flex flex-column" id="4"><p>Late limit: 2019-10-31 16:10:00</p><p></p><p>Current code: default</p><p><a target="_blank" rel="noopenner noreferrer" href="http://api.qrserver.com/v1/create-qr-code/?data=https%3A%2Fattendancerus.azurewebsites.net%2Fvalidate.php%3Fcode%3Ddefault%26class%3D4%26course%3D7%26name%3DCSC442%3A+Data+Mining&amp;size=500x500" style="color:rgb(50,205,50)">See QR code</a><!--  color --></p><form method="POST" action="./newcode.php?id=7&amp;class=4&amp;name=CSC442%3A+Data+Mining"><input type="text" name="code"><input type="submit" value="Change Code" class="btn btn-primary"></form><a href="https://attendancerus.azurewebsites.net/class.php?class=4&amp;course=7&amp;name=CSC442%3A+Data+Mining" style="color:rgb(50,205,50)">0 students checked in</a><!--  color --></div><div class="card-footer"><button class="btn btn-info" onclick="toggle(4)">Show/Hide details</button></div></div><div class="card"><div class="card-header"><h5>3 . 2019-11-01 10:00:00</h5></div><div class="card-body d-inline-flex flex-column" id="3"><p>Late limit: 2019-11-01 09:30:00</p><p></p><p>Current code: default</p><p><a target="_blank" rel="noopenner noreferrer" href="http://api.qrserver.com/v1/create-qr-code/?data=https%3A%2Fattendancerus.azurewebsites.net%2Fvalidate.php%3Fcode%3Ddefault%26class%3D3%26course%3D7%26name%3DCSC442%3A+Data+Mining&amp;size=500x500" style="color:rgb(50,205,50)">See QR code</a><!--  color --></p><form method="POST" action="./newcode.php?id=7&amp;class=3&amp;name=CSC442%3A+Data+Mining"><input type="text" name="code"><input type="submit" value="Change Code" class="btn btn-primary"></form><a href="https://attendancerus.azurewebsites.net/class.php?class=3&amp;course=7&amp;name=CSC442%3A+Data+Mining" style="color:rgb(50,205,50)">1 students checked in</a><!--  color --></div><div class="card-footer"><button class="btn btn-info" onclick="toggle(3)">Show/Hide details</button></div></div>
+<script src="course.php_files/jquery-3.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="course.php_files/popper.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="course.php_files/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    document.getElementById("formToggle").addEventListener("click", function(){
+        console.log("clicked");
+        let e = document.getElementById("createForm");
+        if (e.className==="d-none"){
+            e.className="d-block";
+        }
+        else {
+            e.className="d-none";
+        }
+    }
+    );
+    function toggle(classID){
+        let e = document.getElementById(classID);
+        if (e.className==="d-none"){
+            e.className="card-body d-inline-flex flex-column";
+        }
+        else{
+            e.className="d-none";
+        }
+    }
+</script>
+<script>
+
+</script>
+
+</div></div></doctype></body></html>
